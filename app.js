@@ -41,8 +41,12 @@ function handleUpdateProfile(){
     // Update interests
     var updateInterests = document.getElementById("inputInterests").value;
     var interests = document.getElementById("interests");
-
     interests.textContent = updateInterests;
+
+    // Update birthday
+    var updateBirthday = document.getElementById("inputBirthday");
+    var birthday = document.getElementById("birthday");
+    birthday.textContent = updateBirthday;
     
     document.getElementById("display").style.display = "block";
     document.getElementById("edit-view").style.display = "none"; 
