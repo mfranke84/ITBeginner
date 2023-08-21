@@ -28,8 +28,12 @@ function handleUpdateProfile(){
     // Update email
     var updateEmail = document.getElementById("inputEmail").value;
     var email = document.getElementById("email");
-
-    email.textContent = updateEmail;
+    if (validator.isEmail(updateEmail)){
+        email.textContent = updateEmail;
+    }
+    else {
+        alert("Wrong email formart");
+    }
     
     // Update interests
     var updateInterests = document.getElementById("inputInterests").value;
