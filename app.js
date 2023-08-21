@@ -1,4 +1,20 @@
 function handleEditProfile(){
+    // Get current name
+    var currentName = document.getElementById("name").textContent;
+    var name = document.getElementById("inputName");
+    name.value = currentName;
+
+    // Get current Email
+    var currentEmail = document.getElementById("email").textContent;
+    var email = document.getElementById("inputEmail");
+    email.value = currentEmail;
+
+    // Get current interests
+    var currentInterests = document.getElementById("interests").textContent;
+    var interests = document.getElementById("inputInterests");
+    interests.value = currentInterests;
+    
+
     document.getElementById("display").style.display = "none";
     document.getElementById("edit-view").style.display = "block";
 }
