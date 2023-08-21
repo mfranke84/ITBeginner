@@ -1,4 +1,7 @@
 function handleEditProfile(){
+    // Init datepicker
+    var datepicker = new Datepicker('#datepicker');
+
     // Get current name
     var currentName = document.getElementById("name").textContent;
     var name = document.getElementById("inputName");
@@ -32,7 +35,7 @@ function handleUpdateProfile(){
         email.textContent = updateEmail;
     }
     else {
-        alert("Wrong email formart");
+        alert("Wrong email format");
     }
     
     // Update interests
