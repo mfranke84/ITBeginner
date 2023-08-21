@@ -20,8 +20,6 @@ function handleUpdateProfile(){
     var interests = document.getElementById("interests");
 
     interests.textContent = updateInterests;
-
-    // One more field
     
     document.getElementById("display").style.display = "block";
     document.getElementById("edit-view").style.display = "none"; 
