@@ -3,19 +3,21 @@
     <head>
         <title>Teamable</title>
         <link rel="stylesheet" href="style.css">
-        <script src="app.js"></script>
         <meta charset="utf-8">
-        
+        <script type="text/javascript" src="node_modules/validator/validator.min.js"></script>
+        <link rel="stylesheet" href="node_modules/Datepicker.js/dist/css/datepicker.material.css">
+        <script src="node_modules/Datepicker.js/dist/datepicker.js"></script>
+        <script src="app.js"></script>
     </head>
     <body>
         <div id="display">
             <h1>User Profile</h1>
             <img src="profile.jpeg" alt="Profile Picture"> 
-            <span>Name: </span><b id="name">Anna Smith</b>
+            <span>Name: </span><b id="name"></b>
             <hr>
-            <span>Email: </span><b id="email">Anna.Smith@gmail.com</b>
+            <span>Email: </span><b id="email"></b>
             <hr>
-            <span>Interests: </span><b id="interests">Coding</b>
+            <span>Interests: </span><b id="interests"></b>
             <hr>
             <span>Birthday: </span><b id="birthday"></b>
             <hr>
@@ -30,7 +32,7 @@
             <hr>
             <span>Interests: </span><input id="inputInterests" type="text" placeholder="Example Coding">
             <hr>
-            <span>Birthday: </span><input id="datepicker" type="text" >
+            <span>Birthday: </span><input type="text" id="datepicker">
             <hr>
             <button onclick="handleUpdateProfile()">Update profile</button>
         </div>

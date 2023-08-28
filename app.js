@@ -1,6 +1,8 @@
+var datepicker;
+
 function handleEditProfile(){
     // Init datepicker
-    var datepicker = new Datepicker('#datepicker');
+    datepicker = new Datepicker('#datepicker');
 
     // Get current name
     var currentName = document.getElementById("name").textContent;
@@ -31,20 +33,22 @@ function handleUpdateProfile(){
     // Update email
     var updateEmail = document.getElementById("inputEmail").value;
     var email = document.getElementById("email");
+    //email.textContent = updateEmail;
     if (validator.isEmail(updateEmail)){
         email.textContent = updateEmail;
     }
     else {
         alert("Wrong email format");
     }
-    
+   
     // Update interests
     var updateInterests = document.getElementById("inputInterests").value;
     var interests = document.getElementById("interests");
     interests.textContent = updateInterests;
 
     // Update birthday
-    var updateBirthday = document.getElementById("inputBirthday");
+    //var updateBirthday = document.getElementById("datepicker");
+    var updateBirthday = datepicker.getValue();
     var birthday = document.getElementById("birthday");
     birthday.textContent = updateBirthday;
     
