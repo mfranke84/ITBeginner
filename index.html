@@ -4,9 +4,6 @@
         <title>Teamable</title>
         <link rel="stylesheet" href="style.css">
         <meta charset="utf-8">
-        <script type="text/javascript" src="node_modules/validator/validator.min.js"></script>
-        <link rel="stylesheet" href="node_modules/Datepicker.js/dist/css/datepicker.material.css">
-        <script src="node_modules/Datepicker.js/dist/datepicker.js"></script>
         <script src="app.js"></script>
     </head>
     <body>
@@ -19,8 +16,6 @@
             <hr>
             <span>Interests: </span><b id="interests"></b>
             <hr>
-            <span>Birthday: </span><b id="birthday"></b>
-            <hr>
             <button onclick="handleEditProfile()">Edit profile</button>
         </div>
         <div id="edit-view">
@@ -31,8 +26,6 @@
             <span>Email: </span><input id="inputEmail" type="text" placeholder="J.mustermann@example.com">
             <hr>
             <span>Interests: </span><input id="inputInterests" type="text" placeholder="Example Coding">
-            <hr>
-            <span>Birthday: </span><input type="text" id="datepicker">
             <hr>
             <button onclick="handleUpdateProfile()">Update profile</button>
         </div>

@@ -1,8 +1,5 @@
-var datepicker;
-
 function handleEditProfile(){
     // Init datepicker
-    datepicker = new Datepicker('#datepicker');
 
     // Get current name
     var currentName = document.getElementById("name").textContent;
@@ -18,6 +15,9 @@ function handleEditProfile(){
     var currentInterests = document.getElementById("interests").textContent;
     var interests = document.getElementById("inputInterests");
     interests.value = currentInterests;
+
+    // Get current birthday
+
     
 
     document.getElementById("display").style.display = "none";
@@ -34,23 +34,14 @@ function handleUpdateProfile(){
     var updateEmail = document.getElementById("inputEmail").value;
     var email = document.getElementById("email");
     //email.textContent = updateEmail;
-    if (validator.isEmail(updateEmail)){
-        email.textContent = updateEmail;
-    }
-    else {
-        alert("Wrong email format");
-    }
-   
+    email.textContent = updateEmail;
     // Update interests
     var updateInterests = document.getElementById("inputInterests").value;
     var interests = document.getElementById("interests");
     interests.textContent = updateInterests;
 
     // Update birthday
-    //var updateBirthday = document.getElementById("datepicker");
-    var updateBirthday = datepicker.getValue();
-    var birthday = document.getElementById("birthday");
-    birthday.textContent = updateBirthday;
+     
     
     document.getElementById("display").style.display = "block";
     document.getElementById("edit-view").style.display = "none"; 
