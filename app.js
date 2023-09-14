@@ -1,5 +1,4 @@
 function handleEditProfile(){
-    // Init datepicker
 
     // Get current name
     var currentName = document.getElementById("name").textContent;
@@ -15,10 +14,6 @@ function handleEditProfile(){
     var currentInterests = document.getElementById("interests").textContent;
     var interests = document.getElementById("inputInterests");
     interests.value = currentInterests;
-
-    // Get current birthday
-
-    
 
     document.getElementById("display").style.display = "none";
     document.getElementById("edit-view").style.display = "block";
