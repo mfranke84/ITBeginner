@@ -29,10 +29,12 @@
         name: "App",
         data() {
             return {
+                // Backend data
                 image: image,
                 name: "Anna Smith",
                 email: "anna.smith@gmail.com",
                 interests: "Coding",
+                
                 isEditMode: true
             }
         },
