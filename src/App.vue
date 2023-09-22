@@ -1,5 +1,5 @@
 <template>
-    <div v-show="!isEditMode">
+    <div onload=""  v-show="!isEditMode">
         <h1>User Profile</h1>
         <img :src="image" alt="Profile Picture"> 
         <span>Name: </span><b id="name">{{ name }}</b>
@@ -31,19 +31,32 @@
             return {
                 // Backend data
                 image: image,
-                name: "Anna Smith",
-                email: "anna.smith@gmail.com",
-                interests: "Coding",
+                name: "",
+                email: "",
+                interests: "",
                 
-                isEditMode: true
+                isEditMode: false
             }
+        },
+        async created() {
+            const userData = await this.fetchUserProfile()
+            this.name = userData.name
+            this.email = userData.email
+            this.interests = userData.interests
         },
         methods: {
             handleEditProfile(){
-                this.isEditMode = true;
+                this.isEditMode = true
             },
             handleUpdateProfile(){
-                this.isEditMode = false;
+                this.isEditMode = false
+            },
+            async fetchUserProfile(){
+                var res = await fetch('get-profile', {
+                    method: "GET"
+                })
+
+                return await res.json();
             }
         }
     }
