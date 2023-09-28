@@ -32,9 +32,20 @@ app.get('/get-profile', async function (req, res){
     // get data from database
     const result = await collection.findOne({ id: 1 });
     console.log(result)
-    
-    
-    res.send(result)
+    client.close()
+
+    response = {}
+
+    if (result !== null) {
+        const response = {
+            name: result.name,
+            email: result.email,
+            interests: result.interests
+        }
+    }
+
+    console.log(response)
+    res.send(response)
 })
 
 app.post('/update-profile', async function(req, res){
