@@ -37,7 +37,7 @@ app.get('/get-profile', async function (req, res){
     response = {}
 
     if (result !== null) {
-        const response = {
+        response = {
             name: result.name,
             email: result.email,
             interests: result.interests
