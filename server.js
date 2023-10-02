@@ -56,7 +56,7 @@ app.post('/update-profile', async function(req, res){
 
     //save payload data to the database
     if( isEmptyObject(payload) || isInvalidEmail(payload) ){
-        res.send({error: "Error: Invalid payload - Could not update user profile data"})
+        res.send({error: "Invalid payload - Could not update user profile data"})
     }
     else{
         // connect to database

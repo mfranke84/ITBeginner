@@ -18,3 +18,17 @@ test ('test request with valid payload', async function(){
 
     server.close()
 })
+
+test ('test request with an invalid payload', async function(){
+    const testPayload = {}
+
+    const response = await request(app)
+        .post('/update-profile')
+        .send(testPayload)
+    console.log(response.body)
+    expect(response.body).toHaveProperty("error")
+    expect(response.body.error).toBe("Invalid payload - Could not update user profile data")
+    
+
+    server.close()
+})
