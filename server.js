@@ -77,7 +77,6 @@ app.post('/update-profile', async function(req, res){
         res.status(200).send({info: "Profile updated successfully"})
     }
 
-
     return 'done.'
 
 
@@ -85,6 +84,11 @@ app.post('/update-profile', async function(req, res){
 })
 
 // Start app to listen on port 3000
-app.listen(3000, function(){
+const server = app.listen(3000, function(){
     console.log("app listening on port 3000")
-});
+})
+
+module.exports = {
+    app,
+    server
+}
