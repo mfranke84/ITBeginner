@@ -3,11 +3,11 @@ const app = express()
 const bodyParser = require('body-parser')
 const { MongoClient } = require('mongodb')
 const { isInvalidEmail, isEmptyObject } = require('./validator')
-const { DB_USER, DB_PASS } = process.env
+const { DB_USER, DB_PASS, DEV } = process.env
 
-// Connection URL
-//const url = 'mongodb://127.0.0.1:27017'
-const url = `mongodb://${DB_USER}:${DB_PASS}@127.0.0.1:27017?authSource=company_db`
+// Connection URL}
+const dbAddress = '127.0.0.1:27017'
+const url = DEV ? `mongodb://${dbAddress}` : `mongodb://${DB_USER}:${DB_PASS}@${dbAddress}?authSource=company_db`
 const client = new MongoClient(url)
 
 // Database Name
