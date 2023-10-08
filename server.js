@@ -5,7 +5,8 @@ const { MongoClient } = require('mongodb')
 const { isInvalidEmail, isEmptyObject } = require('./validator')
 
 // Connection URL
-const url = 'mongodb://localhost:27017'
+//const url = 'mongodb://127.0.0.1:27017'
+const url = 'mongodb://myapp:mysecretpass@127.0.0.1:27017?authSource=company_db'
 const client = new MongoClient(url)
 
 // Database Name
